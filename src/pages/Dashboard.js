@@ -1,35 +1,24 @@
+import { Balance } from '../components/Balance'
+import { TransactionsBox } from '../components/TransactionsBox'
+import { CategoriesBox } from '../components/CategoriesBox'
+import { HistoryBox } from '../components/HistoryBox'
+
+import{GlobalProvider} from '../context/GlobalContext'
+
 const Dashboard = () => {
+
     return(
-        <div className="app">
-            <h1>Expense Tracker</h1>
-            <div className="flex mainArea">
+        <GlobalProvider>
+            <div className="flex app">
                 <div className="flex leftSide">
-                    <div className="box">
-                        <h1>Total Balance</h1>
-                        <h1>$300</h1>
-                    </div>
-                    <div className="transactions box">
-                        <h1>New Transaction</h1>
-                        <form>
-                            <label>Transaction Name</label>
-                            <br></br>
-                            <input type="text"></input>
-                        </form>
-                        <form>
-                            <input type="radio" name="profit"></input><label>Income</label>
-                            <input type="radio" name="profit" id="expense"></input><label>Expense</label>
-                        </form>
-                        <form>
-                            <label>$</label><input placeholder="0.00" type="number" step={".01"}></input>
-                            <input type="submit"></input>
-                        </form>
-                    </div>
+                    <h1 id="title">Expense Tracker</h1>
+                    <Balance></Balance>
+                    <TransactionsBox></TransactionsBox>
+                    <CategoriesBox></CategoriesBox>
                 </div>    
-                    <div className="history box">
-                        <h1>Transaction History</h1>
-                    </div>
-            </div>  
-        </div>
+                <HistoryBox></HistoryBox>
+            </div>
+        </GlobalProvider>
     );
 }
 

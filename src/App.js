@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from "./pages/Layout";
 import Dashboard from "./pages/Dashboard";
-import About from "./pages/About";
+import Budget from "./pages/Budget";
 
 import "./App.css";
 
@@ -14,12 +14,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path="about" element={<About />} />
+          <Route path="Budget" element={<Budget />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);

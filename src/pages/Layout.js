@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import '../images/home.png';
 
 const Layout = () => {
   return (
@@ -6,12 +7,12 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <img src="../images/home.png" alt=""></img>
+            <img src={require("../images/home.png")} alt=""></img>
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <img src="../images/home.png" alt=""></img>
-            <Link to="/about">About</Link>
+            <img src={require("../images/home.png")} alt=""></img>
+            <Link to="/Budget">Budget</Link>
           </li>
         </ul>
       </nav>
