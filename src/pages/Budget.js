@@ -1,8 +1,20 @@
+import {UserPieChart} from '../components/UserPieChart'
+import { PieInput } from '../components/PieInput'
+import { PieProvider } from '../context/PieContext';
+
 const Budget = () => {
+
     return(
-        <div className="app">
-            <h1>About</h1>
-        </div>
+        <PieProvider>
+            <div className="flex app">
+                <div>
+                    <h1>Budget</h1>
+                    <UserPieChart></UserPieChart>
+                </div>
+                <PieInput></PieInput>
+            </div>
+        </PieProvider>
+
     );
 }
 

@@ -12,7 +12,6 @@ export const HistoryBox = () => {
             <div id='historyContainer'>
                 {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction} />))}
             </div>
-                
         </div>
     )
 }

@@ -13,10 +13,6 @@ export const TransactionsBox = () => {
     const { addTransaction } = useContext(GlobalContext);
 
     function ifClicked(){
-        //console.log("text = " + text);
-        //console.log("type = " + type);
-        //console.log("category = " + category);
-        //console.log("amount = " + amount);
 
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000),
