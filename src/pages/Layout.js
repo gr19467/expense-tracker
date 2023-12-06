@@ -11,7 +11,7 @@ const Layout = () => {
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <img src={require("../images/home.png")} alt=""></img>
+            <img src={require("../images/budget.png")} alt=""></img>
             <Link to="/Budget">Budget</Link>
           </li>
         </ul>

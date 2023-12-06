@@ -94,15 +94,26 @@ nav{
   height: 100vh;
 
   font-size: 4vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
   ul{
+    height: 20vh;
+
     list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   li img{
     width: 40px;
     height: 40px;
+
+    margin-right: 1vw;
   }
 
   a{
